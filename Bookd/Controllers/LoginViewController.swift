@@ -26,10 +26,7 @@ class LoginViewController: UIViewController {
             print("User is already logged in");
             
             // if the user is already logged in, creating an instance for the dashboard vc and then presenting it
-            let dashboardVC = storyboard!.instantiateViewController(withIdentifier: "Dashboard");
-            let nvc = UINavigationController(rootViewController: dashboardVC);
-            nvc.modalPresentationStyle = .fullScreen
-            present(nvc, animated: true)
+            redirectToDashboard()
         }
     }
     
@@ -48,6 +45,14 @@ class LoginViewController: UIViewController {
             
             let user = result.user
             print("Logged in User: \(user)");
+            self.redirectToDashboard()
         })
+    }
+    
+    private func redirectToDashboard(){
+        let dashboardVC = self.storyboard!.instantiateViewController(withIdentifier: "Dashboard");
+        let nvc = UINavigationController(rootViewController: dashboardVC);
+        nvc.modalPresentationStyle = .fullScreen
+        self.present(nvc, animated: true)
     }
 }

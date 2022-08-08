@@ -14,13 +14,34 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        // check if you can get the any user detail from current user object
-        if(FirebaseAuth.Auth.auth().currentUser != nil) {
-            let user = FirebaseAuth.Auth.auth().currentUser
-            print(user?.uid) // use UID to store any details in firebase
-        }
-        
         self.WelcomeLabel.text = "Welcome"
+    }
+    
+    @IBAction func invoiceButtonPressed(_ sender: Any) {
+        goToTab(index: 0)
+    }
+    
+    @IBAction func appointmentButtonPressed(_ sender: Any) {
+        goToTab(index: 1)
+    }
+    
+    @IBAction func conversationButtonPressed(_ sender: Any) {
+        goToTab(index: 2)
+    }
+    
+    @IBAction func serviceButtonPressed(_ sender: Any) {
+        goToTab(index: 3)
+    }
+    
+    @IBAction func settingsButtonPressed(_ sender: Any) {
+        goToTab(index: 4)
+    }
+    
+    
+    private func goToTab(index: Int){
+        let tabVC = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController") as! UITabBarController
+        tabVC.selectedIndex = index
+        tabVC.modalPresentationStyle = .fullScreen
+        self.present(tabVC, animated: true)
     }
 }

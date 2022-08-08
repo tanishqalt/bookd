@@ -12,6 +12,9 @@
 		08B6868028A0B255001357B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B6867F28A0B255001357B2 /* LoginViewController.swift */; };
 		08B6868228A0B72D001357B2 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B6868128A0B72D001357B2 /* DashboardViewController.swift */; };
 		08B6868428A0C1D2001357B2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B6868328A0C1D2001357B2 /* SettingsViewController.swift */; };
+		08B6868628A15A3E001357B2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B6868528A15A3D001357B2 /* DatabaseManager.swift */; };
+		08B6868928A15B8A001357B2 /* DatabaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B6868828A15B8A001357B2 /* DatabaseModels.swift */; };
+		08B6868B28A1A7BF001357B2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B6868A28A1A7BF001357B2 /* TabBarViewController.swift */; };
 		08F9C473288B1D6100D25296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9C472288B1D6100D25296 /* AppDelegate.swift */; };
 		08F9C475288B1D6100D25296 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9C474288B1D6100D25296 /* SceneDelegate.swift */; };
 		08F9C477288B1D6100D25296 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9C476288B1D6100D25296 /* ViewController.swift */; };
@@ -27,6 +30,9 @@
 		08B6867F28A0B255001357B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08B6868128A0B72D001357B2 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		08B6868328A0C1D2001357B2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		08B6868528A15A3D001357B2 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		08B6868828A15B8A001357B2 /* DatabaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModels.swift; sourceTree = "<group>"; };
+		08B6868A28A1A7BF001357B2 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		08F9C46F288B1D6100D25296 /* Bookd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08F9C472288B1D6100D25296 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08F9C474288B1D6100D25296 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08B6868728A15B81001357B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				08B6868828A15B8A001357B2 /* DatabaseModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		08F9C466288B1D6100D25296 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +87,7 @@
 		08F9C471288B1D6100D25296 /* Bookd */ = {
 			isa = PBXGroup;
 			children = (
+				08B6868728A15B81001357B2 /* Models */,
 				08B6867B28A08DBF001357B2 /* GoogleService-Info.plist */,
 				08F9C488288B2F3000D25296 /* Controllers */,
 				08F9C487288B2F2B00D25296 /* Views */,
@@ -88,6 +103,7 @@
 				08F9C472288B1D6100D25296 /* AppDelegate.swift */,
 				08F9C474288B1D6100D25296 /* SceneDelegate.swift */,
 				08F9C47B288B1D6400D25296 /* Assets.xcassets */,
+				08B6868528A15A3D001357B2 /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -109,6 +125,7 @@
 				08B6867F28A0B255001357B2 /* LoginViewController.swift */,
 				08B6868128A0B72D001357B2 /* DashboardViewController.swift */,
 				08B6868328A0C1D2001357B2 /* SettingsViewController.swift */,
+				08B6868A28A1A7BF001357B2 /* TabBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -246,12 +263,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B6868628A15A3E001357B2 /* DatabaseManager.swift in Sources */,
 				08F9C477288B1D6100D25296 /* ViewController.swift in Sources */,
 				08B6868228A0B72D001357B2 /* DashboardViewController.swift in Sources */,
 				08B6868428A0C1D2001357B2 /* SettingsViewController.swift in Sources */,
 				08F9C473288B1D6100D25296 /* AppDelegate.swift in Sources */,
 				08F9C475288B1D6100D25296 /* SceneDelegate.swift in Sources */,
 				08B6868028A0B255001357B2 /* LoginViewController.swift in Sources */,
+				08B6868928A15B8A001357B2 /* DatabaseModels.swift in Sources */,
+				08B6868B28A1A7BF001357B2 /* TabBarViewController.swift in Sources */,
 				08B6867E28A09014001357B2 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
