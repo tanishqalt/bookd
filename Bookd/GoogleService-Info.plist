@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>582615037890-558fg4cslphfuqusku5mfbocd9gj0c9o.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.582615037890-558fg4cslphfuqusku5mfbocd9gj0c9o</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBQmT3YYXeHIoINLuESJHcy-haC1HnNedA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>582615037890</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>humber.Bookd</string>
+	<key>PROJECT_ID</key>
+	<string>bookd-b7519</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bookd-b7519.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:582615037890:ios:5e9b357b434a62d2aa085b</string>
+</dict>
+</plist>
