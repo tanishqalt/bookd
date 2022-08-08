@@ -30,7 +30,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Get Started"/>
                                 <connections>
-                                    <segue destination="rzc-Zj-iOb" kind="show" id="7jq-aJ-So6"/>
+                                    <segue destination="rzc-Zj-iOb" kind="presentation" modalPresentationStyle="fullScreen" id="81k-eS-Yuh"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Manage Invoices, Appointments, Services and clients under one roof" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xa-xB-ABK">
@@ -81,39 +81,39 @@
             </objects>
             <point key="canvasLocation" x="212" y="141"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="5k3-wi-Ker">
             <objects>
-                <viewController id="rzc-Zj-iOb" sceneMemberID="viewController">
+                <viewController id="rzc-Zj-iOb" customClass="LoginViewController" customModule="Bookd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g5c-CP-ccS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWU-lO-Jc4">
-                                <rect key="frame" x="46" y="172" width="83" height="32"/>
+                                <rect key="frame" x="46" y="128" width="83" height="32"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CtK-NH-4nH">
-                                <rect key="frame" x="46" y="228" width="321" height="34"/>
+                                <rect key="frame" x="46" y="184" width="321" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="******" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cb4-a9-N1l">
-                                <rect key="frame" x="46" y="272" width="321" height="34"/>
+                                <rect key="frame" x="46" y="228" width="321" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNV-Cf-oRI">
-                                <rect key="frame" x="46" y="330" width="321" height="52"/>
+                                <rect key="frame" x="46" y="286" width="321" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="TRD-F0-oge"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Get Started"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                 <connections>
-                                    <segue destination="PU3-cT-FPd" kind="presentation" modalPresentationStyle="fullScreen" id="v6o-4m-1Ec"/>
+                                    <action selector="loginPressed:" destination="rzc-Zj-iOb" eventType="touchUpInside" id="ZmM-fJ-FDh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79c-Fj-4bM">
@@ -148,6 +148,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YM8-UU-uh2"/>
+                    <connections>
+                        <outlet property="emailInput" destination="CtK-NH-4nH" id="VeQ-VQ-OzF"/>
+                        <outlet property="passwordInput" destination="cb4-a9-N1l" id="Vba-9Y-8WG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lrb-dY-Nho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,15 +234,15 @@
             </objects>
             <point key="canvasLocation" x="2530.434782608696" y="141.96428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Dashboard View Controller-->
         <scene sceneID="oXB-rc-b5Y">
             <objects>
-                <viewController id="PU3-cT-FPd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Dashboard" id="PU3-cT-FPd" customClass="DashboardViewController" customModule="Bookd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AVG-DB-wxy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Merrybeth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8m-X0-gDd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Merrybeth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8m-X0-gDd">
                                 <rect key="frame" x="46" y="216" width="322" height="32"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
@@ -267,8 +271,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="View Services"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6V5-jc-S6M">
-                                <rect key="frame" x="46" y="452" width="322" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6V5-jc-S6M">
+                                <rect key="frame" x="46" y="452" width="322" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Settings"/>
                             </button>
@@ -297,6 +301,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="laX-nG-9OU"/>
+                    <connections>
+                        <outlet property="WelcomeLabel" destination="n8m-X0-gDd" id="fFB-Ql-Bkh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKK-ue-anc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -621,10 +628,10 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fDQ-3V-820">
-                                <rect key="frame" x="20" y="205" width="374" height="540"/>
+                                <rect key="frame" x="20" y="205" width="374" height="340"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="540" id="4eU-Gt-ywT"/>
+                                    <constraint firstAttribute="height" constant="340" id="4eU-Gt-ywT"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="AGJ-ak-FsN">
@@ -652,7 +659,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lU9-TD-00s">
-                                <rect key="frame" x="20" y="760" width="374" height="45"/>
+                                <rect key="frame" x="20" y="564" width="374" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="kDL-QU-UmM"/>
                                 </constraints>
@@ -668,7 +675,7 @@
                         <constraints>
                             <constraint firstItem="fDQ-3V-820" firstAttribute="trailing" secondItem="lfy-xA-g0D" secondAttribute="trailingMargin" id="1Y1-mt-dlz"/>
                             <constraint firstItem="fDQ-3V-820" firstAttribute="leading" secondItem="lU9-TD-00s" secondAttribute="leading" id="C0H-c1-Dgv"/>
-                            <constraint firstItem="lU9-TD-00s" firstAttribute="top" secondItem="fDQ-3V-820" secondAttribute="bottom" constant="15" id="HKb-XH-83c"/>
+                            <constraint firstItem="lU9-TD-00s" firstAttribute="top" secondItem="fDQ-3V-820" secondAttribute="bottom" constant="19" id="HKb-XH-83c"/>
                             <constraint firstItem="fDQ-3V-820" firstAttribute="trailing" secondItem="AwA-kT-RHM" secondAttribute="trailing" id="SaN-XL-cio"/>
                             <constraint firstItem="fDQ-3V-820" firstAttribute="leading" secondItem="AwA-kT-RHM" secondAttribute="leading" id="cze-Eb-aDk"/>
                             <constraint firstItem="fDQ-3V-820" firstAttribute="leading" secondItem="lfy-xA-g0D" secondAttribute="leadingMargin" id="drE-cI-TSN"/>
@@ -690,7 +697,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lDL-Eo-R7L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-581" y="3323"/>
+            <point key="canvasLocation" x="-581.15942028985512" y="3322.7678571428569"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pX1-ck-vvL">
@@ -889,9 +896,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="24p-07-eUZ" kind="relationship" relationship="viewControllers" id="uF6-OQ-yim"/>
                         <segue destination="dZT-LH-wS3" kind="relationship" relationship="viewControllers" id="aMJ-yw-3Uh"/>
                         <segue destination="PWf-P6-eE8" kind="relationship" relationship="viewControllers" id="HSN-vH-KJ1"/>
-                        <segue destination="24p-07-eUZ" kind="relationship" relationship="viewControllers" id="uF6-OQ-yim"/>
                         <segue destination="Mvf-RQ-bW6" kind="relationship" relationship="viewControllers" id="cKO-rF-rE8"/>
                         <segue destination="1WU-Fd-waV" kind="relationship" relationship="viewControllers" id="aL5-pB-cb2"/>
                     </connections>
@@ -1123,7 +1130,7 @@
         <!--Settings-->
         <scene sceneID="C9Y-Wz-Q9d">
             <objects>
-                <viewController id="8wa-RE-cEo" sceneMemberID="viewController">
+                <viewController id="8wa-RE-cEo" customClass="SettingsViewController" customModule="Bookd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C5R-f0-z5V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1135,6 +1142,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="8wa-RE-cEo" eventType="touchUpInside" id="YuB-tZ-3AD"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="G5G-y9-y0W">
                                 <rect key="frame" x="20" y="178" width="374" height="540"/>
@@ -1179,6 +1189,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="i0v-XN-R5L"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="Qpj-xU-g7l" id="kp3-v2-fol"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zla-Jb-A8w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1600,7 +1613,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ctX-lW-9Z5"/>
+        <segue reference="HSN-vH-KJ1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>

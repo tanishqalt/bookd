@@ -21,9 +21,9 @@ class RegisterViewController: UIViewController {
     @IBAction func registerButton(_ sender: Any) {
         print("Registering with Firebase")
         
-        // guard statements to see if the things are empty
+        // Todo: guard statements to see if the things are empty
         
-        // make sure the password prompt (>6 characters) is sent
+        // Todo: make sure the password prompt (>6 characters) is sent
         
         FirebaseAuth.Auth.auth().createUser(withEmail: emailInput.text!, password: passwordInput.text!, completion: {
             authResult, error in
