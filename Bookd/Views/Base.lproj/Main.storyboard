@@ -153,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="1763.7681159420292" y="140.625"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="jJz-04-7K8">
             <objects>
-                <viewController id="fbA-5h-f7d" sceneMemberID="viewController">
+                <viewController id="fbA-5h-f7d" customClass="RegisterViewController" customModule="Bookd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="caH-MN-6Pq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,7 +188,10 @@
                                     <constraint firstAttribute="height" constant="52" id="1tc-4W-SWw"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Get Started"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Register Now"/>
+                                <connections>
+                                    <action selector="registerButton:" destination="fbA-5h-f7d" eventType="touchUpInside" id="ujj-Sr-Efa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Duq-ka-VHP">
                                 <rect key="frame" x="108.5" y="444" width="197" height="31"/>
@@ -217,6 +220,11 @@
                             <constraint firstItem="ijT-e9-w82" firstAttribute="centerX" secondItem="zHv-3q-RlU" secondAttribute="centerX" id="sVr-g5-C2a"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailInput" destination="CHD-bx-311" id="BSM-Xv-MzI"/>
+                        <outlet property="passwordInput" destination="zHv-3q-RlU" id="42V-Kd-igH"/>
+                        <outlet property="usernameInput" destination="cz4-bf-JvE" id="dvX-nL-RhY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3w-Ek-Mko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
