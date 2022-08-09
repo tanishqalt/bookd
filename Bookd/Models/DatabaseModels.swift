@@ -28,6 +28,7 @@ struct User {
 // Service Model
 
 struct UserService {
+    let serviceID: String;
     let title: String;
     let description: String;
     let hourlyRate: String;

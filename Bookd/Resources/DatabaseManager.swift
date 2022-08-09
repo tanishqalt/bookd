@@ -34,8 +34,11 @@ extension DatabaseManager {
         // print statement
         print("Inside: Creating service for user \(uid)")
         
+        let reference = database.child("Services").child(uid).childByAutoId();
+        
         // storing things under services -> uid -> generating auto id and then setting value to it
-        database.child("Services").child(uid).childByAutoId().setValue([
+        reference.setValue([
+            "serviceID": reference.key,
             "title": service.title,
             "description": service.description,
             "minHours": service.minHours,

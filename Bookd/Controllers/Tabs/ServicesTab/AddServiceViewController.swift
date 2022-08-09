@@ -35,7 +35,7 @@ class AddServiceViewController: UIViewController {
         print("Outside: Creating service for \(user?.uid ?? "Couldn't retreive UID")")
         
         // submit to firebase
-        DatabaseManager.shared.insertService(uid: user!.uid, service: UserService(title: title, description: description, hourlyRate: hourlyRate, minHours: minHours, category: category))
+        DatabaseManager.shared.insertService(uid: user!.uid, service: UserService(serviceID:"" ,title: title, description: description, hourlyRate: hourlyRate, minHours: minHours, category: category))
         
         // show alert
         print("Service Created Successfully")
