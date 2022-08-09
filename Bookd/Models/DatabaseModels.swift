@@ -23,3 +23,14 @@ struct User {
 
 
 // Appointment Model
+
+
+// Service Model
+
+struct UserService {
+    let title: String;
+    let description: String;
+    let hourlyRate: String;
+    let minHours: String;
+    let category: String;
+}

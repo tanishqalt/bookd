@@ -26,5 +26,22 @@ extension DatabaseManager {
             "uid": user.uid
         ])
     }
+    
+    // insert the services under "/service/uid" tag
+    
+    public func insertService(uid: String, service: UserService) {
+        
+        // print statement
+        print("Inside: Creating service for user \(uid)")
+        
+        // storing things under services -> uid -> generating auto id and then setting value to it
+        database.child("Services").child(uid).childByAutoId().setValue([
+            "title": service.title,
+            "description": service.description,
+            "minHours": service.minHours,
+            "hourlyRate": service.hourlyRate,
+            "category": service.category
+        ])
+    }
 }
 
