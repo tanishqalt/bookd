@@ -28,7 +28,6 @@ extension DatabaseManager {
     }
     
     // insert the services under "/service/uid" tag
-    
     public func insertService(uid: String, service: UserService) {
         
         // print statement
@@ -44,6 +43,24 @@ extension DatabaseManager {
             "minHours": service.minHours,
             "hourlyRate": service.hourlyRate,
             "category": service.category
+        ])
+    }
+    
+    // insert the conversations under "/conversions/uid" tag
+    public func insertConversation(uid: String, conversation: Conversation) {
+        
+        // print statement
+        print("Inside: Creating conversation for user \(uid)")
+        
+        let reference = database.child("Conversations").child(uid).childByAutoId();
+        
+        // storing things under services -> uid -> generating auto id and then setting value to it
+        reference.setValue([
+            "conversationID": reference.key,
+            "subject": conversation.subject,
+            "email": conversation.email,
+            "invoiceNumber": conversation.invoiceNumber,
+            "message": conversation.message,
         ])
     }
 }

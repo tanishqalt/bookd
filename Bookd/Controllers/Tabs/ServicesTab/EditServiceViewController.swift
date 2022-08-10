@@ -25,7 +25,6 @@ class EditServiceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print("Fetching data for \(serviceID ?? "")")
     }
     
@@ -71,6 +70,8 @@ class EditServiceViewController: UIViewController {
         
         // update the values
         dbRef.updateChildValues(["title": serviceTitle.text!, "category": serviceCategory.text!, "minHours": minHours.text!, "hourlyRate": hourlyRate.text!, "description": serviceDescription.text!])
+
+        // Todo: add a success alert
         
         // go back to the previous view
         self.dismiss(animated: true)

@@ -18,12 +18,15 @@
 		08C98BB928A1F90200F0E4FF /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C98BB828A1F90200F0E4FF /* ServicesViewController.swift */; };
 		08C98BBC28A1F97300F0E4FF /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C98BBB28A1F97300F0E4FF /* AddServiceViewController.swift */; };
 		08C98BBF28A2127300F0E4FF /* EditServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C98BBE28A2127300F0E4FF /* EditServiceViewController.swift */; };
+		08C98BC228A2A87B00F0E4FF /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C98BC128A2A87B00F0E4FF /* ConversationsViewController.swift */; };
+		08C98BC528A2ABAD00F0E4FF /* AddConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C98BC428A2ABAD00F0E4FF /* AddConversationViewController.swift */; };
 		08F9C473288B1D6100D25296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9C472288B1D6100D25296 /* AppDelegate.swift */; };
 		08F9C475288B1D6100D25296 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9C474288B1D6100D25296 /* SceneDelegate.swift */; };
 		08F9C477288B1D6100D25296 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9C476288B1D6100D25296 /* ViewController.swift */; };
 		08F9C47A288B1D6100D25296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F9C478288B1D6100D25296 /* Main.storyboard */; };
 		08F9C47C288B1D6400D25296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08F9C47B288B1D6400D25296 /* Assets.xcassets */; };
 		08F9C47F288B1D6400D25296 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F9C47D288B1D6400D25296 /* LaunchScreen.storyboard */; };
+		08FF597F28A3E142007BA90C /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF597E28A3E142007BA90C /* NewViewController.swift */; };
 		1B019439CD1D463CE8A10800 /* Pods_Bookd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5985EC6818FFB0F3C36A8B7 /* Pods_Bookd.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,8 @@
 		08C98BB828A1F90200F0E4FF /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		08C98BBB28A1F97300F0E4FF /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
 		08C98BBE28A2127300F0E4FF /* EditServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditServiceViewController.swift; sourceTree = "<group>"; };
+		08C98BC128A2A87B00F0E4FF /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		08C98BC428A2ABAD00F0E4FF /* AddConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConversationViewController.swift; sourceTree = "<group>"; };
 		08F9C46F288B1D6100D25296 /* Bookd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08F9C472288B1D6100D25296 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08F9C474288B1D6100D25296 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		08F9C47B288B1D6400D25296 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08F9C47E288B1D6400D25296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08F9C480288B1D6400D25296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08FF597E28A3E142007BA90C /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		4BB49487B54513978E815F56 /* Pods-Bookd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookd.debug.xcconfig"; path = "Target Support Files/Pods-Bookd/Pods-Bookd.debug.xcconfig"; sourceTree = "<group>"; };
 		704CA2174A7F360E8D66A64F /* Pods-Bookd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookd.release.xcconfig"; path = "Target Support Files/Pods-Bookd/Pods-Bookd.release.xcconfig"; sourceTree = "<group>"; };
 		D5985EC6818FFB0F3C36A8B7 /* Pods_Bookd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bookd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +81,7 @@
 		08C98BBA28A1F91700F0E4FF /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				08C98BC028A223A100F0E4FF /* ConversationsTab */,
 				08C98BBD28A1F97800F0E4FF /* ServicesTab */,
 				08B6868328A0C1D2001357B2 /* SettingsViewController.swift */,
 			);
@@ -89,6 +96,16 @@
 				08C98BBE28A2127300F0E4FF /* EditServiceViewController.swift */,
 			);
 			path = ServicesTab;
+			sourceTree = "<group>";
+		};
+		08C98BC028A223A100F0E4FF /* ConversationsTab */ = {
+			isa = PBXGroup;
+			children = (
+				08C98BC128A2A87B00F0E4FF /* ConversationsViewController.swift */,
+				08C98BC428A2ABAD00F0E4FF /* AddConversationViewController.swift */,
+				08FF597E28A3E142007BA90C /* NewViewController.swift */,
+			);
+			path = ConversationsTab;
 			sourceTree = "<group>";
 		};
 		08F9C466288B1D6100D25296 = {
@@ -291,12 +308,15 @@
 				08B6868628A15A3E001357B2 /* DatabaseManager.swift in Sources */,
 				08F9C477288B1D6100D25296 /* ViewController.swift in Sources */,
 				08C98BBC28A1F97300F0E4FF /* AddServiceViewController.swift in Sources */,
+				08C98BC528A2ABAD00F0E4FF /* AddConversationViewController.swift in Sources */,
 				08B6868228A0B72D001357B2 /* DashboardViewController.swift in Sources */,
 				08B6868428A0C1D2001357B2 /* SettingsViewController.swift in Sources */,
 				08F9C473288B1D6100D25296 /* AppDelegate.swift in Sources */,
 				08F9C475288B1D6100D25296 /* SceneDelegate.swift in Sources */,
 				08B6868028A0B255001357B2 /* LoginViewController.swift in Sources */,
 				08B6868928A15B8A001357B2 /* DatabaseModels.swift in Sources */,
+				08C98BC228A2A87B00F0E4FF /* ConversationsViewController.swift in Sources */,
+				08FF597F28A3E142007BA90C /* NewViewController.swift in Sources */,
 				08C98BBF28A2127300F0E4FF /* EditServiceViewController.swift in Sources */,
 				08B6868B28A1A7BF001357B2 /* TabBarViewController.swift in Sources */,
 				08C98BB928A1F90200F0E4FF /* ServicesViewController.swift in Sources */,

@@ -13,6 +13,9 @@ struct User {
     let lastName: String;
     let username: String;
     let emailAddress: String;
+    var paymentAddress: String {
+      return emailAddress
+    };
     let uid: String;
 }
 
@@ -20,6 +23,13 @@ struct User {
 
 
 // Conversation Model
+struct Conversation {
+    let conversationID: String;
+    let email: String;
+    let subject: String;
+    let message: String;
+    let invoiceNumber: String;
+}
 
 
 // Appointment Model

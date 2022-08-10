@@ -1,51 +1,51 @@
 //
-//  ServicesViewController.swift
+//  ConversationsViewController.swift
 //  Bookd
 //
-//  Created by Tanishq Sharma on 2022-08-08.
+//  Created by Tanishq Sharma on 2022-08-09.
 //
 
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class ServicesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    // identifier for edit segue
-    let segueIdentifier = "editServiceSegue"
-    var selectedServiceID: String?;
+class ConversationsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
-    // to store services
-    var services = [UserService]()
+    // to store conversations
+    var conversations = [Conversation]()
+    
+    // identifier for edit segue
+    let segueIdentifier = "showMessageSegue"
+    var selectedConversationID: String?;
     
     // returns the services count
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return services.count
+        return conversations.count
     }
     
     // returns the cell after mapping the service title
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceCell", for: indexPath)
-        cell.textLabel?.text = services[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ConversationCell", for: indexPath)
+        cell.textLabel?.text = conversations[indexPath.row].subject
         return cell
     }
     
-    // sets the selectedServiceID variable with the unique key of service and then performs the segue
+    
+    // sets the selectedConversationID variable with the unique key of conversation and then performs the segue
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedServiceID = services[indexPath.row].serviceID
+        selectedConversationID = conversations[indexPath.row].conversationID
         performSegue(withIdentifier: segueIdentifier, sender: nil)
         return tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,11 +55,11 @@ class ServicesViewController: UIViewController, UITableViewDataSource, UITableVi
     // prepares for the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == segueIdentifier) {
-            guard let editServiceVC = segue.destination as? EditServiceViewController else { return }
-            editServiceVC.serviceID = self.selectedServiceID
+            // do something later
+            guard let newViewController = segue.destination as? NewViewController else { return }
+            newViewController.conversationID = self.selectedConversationID
         }
     }
-    
     
     // function to load the service database
     private func loadData(){
@@ -71,7 +71,7 @@ class ServicesViewController: UIViewController, UITableViewDataSource, UITableVi
         let uid = currentUser?.uid;
         
         // sets the tabkey for the DB child reference
-        let tabKey = "Services";
+        let tabKey = "Conversations";
         
         // gets a database referenece
         let dbRef = FirebaseDatabase.Database.database().reference();
@@ -81,7 +81,7 @@ class ServicesViewController: UIViewController, UITableViewDataSource, UITableVi
             (snapshot) in
             
             // cleans the services array to make sure it doesn't duplicate since it is observing continuously
-            self.services.removeAll();
+            self.conversations.removeAll();
             
             // for each  children in the snapshot, it iterations, gets the child as DataSnapshot
             snapshot.children.forEach({ (child) in
@@ -91,10 +91,10 @@ class ServicesViewController: UIViewController, UITableViewDataSource, UITableVi
                     let value = child.value as! NSDictionary
                     
                     // create a service using our model
-                    let service = UserService(serviceID: value["serviceID"] as! String, title: value["title"] as! String, description: value["description"] as! String, hourlyRate: value["hourlyRate"] as! String, minHours: value["minHours"] as! String, category: value["category"] as! String)
+                    let new_conversation = Conversation(conversationID: value["conversationID"] as! String, email: value["email"] as! String, subject: value["subject"] as! String, message: value["message"] as! String, invoiceNumber: value["invoiceNumber"] as! String)
                     
                     // add it to the array
-                    self.services.append(service)
+                    self.conversations.append(new_conversation)
                     
                     // reload data
                     self.tableView.reloadData();
@@ -103,4 +103,5 @@ class ServicesViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
     }
+
 }
