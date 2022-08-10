@@ -20,6 +20,15 @@ struct User {
 }
 
 // Invoice Model
+struct Invoice {
+    let invoiceID: String;
+    let status: String;
+    let contactEmail: String;
+    let dateCompleted: String;
+    let invoiceNumber: String;
+    let serviceDescription: String;
+    let invoiceTotal: String;
+}
 
 
 // Conversation Model
@@ -33,6 +42,14 @@ struct Conversation {
 
 
 // Appointment Model
+struct Appointment {
+    let appointmentID: String;
+    let contactName: String;
+    let contactEmail: String;
+    let scheduledTime: String;
+    let service: String;
+    let notes: String;
+}
 
 
 // Service Model

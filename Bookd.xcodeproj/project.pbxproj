@@ -27,6 +27,12 @@
 		08F9C47C288B1D6400D25296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08F9C47B288B1D6400D25296 /* Assets.xcassets */; };
 		08F9C47F288B1D6400D25296 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F9C47D288B1D6400D25296 /* LaunchScreen.storyboard */; };
 		08FF597F28A3E142007BA90C /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF597E28A3E142007BA90C /* NewViewController.swift */; };
+		08FF598228A3E9CF007BA90C /* AppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF598128A3E9CF007BA90C /* AppointmentsViewController.swift */; };
+		08FF598428A3EA86007BA90C /* CreateAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF598328A3EA86007BA90C /* CreateAppointmentsViewController.swift */; };
+		08FF598628A3F71E007BA90C /* ShowAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF598528A3F71E007BA90C /* ShowAppointmentViewController.swift */; };
+		08FF598828A3FD96007BA90C /* CancelConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF598728A3FD96007BA90C /* CancelConfirmationViewController.swift */; };
+		08FF598B28A400C2007BA90C /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF598A28A400C2007BA90C /* InvoiceViewController.swift */; };
+		08FF598D28A400F8007BA90C /* CreateInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF598C28A400F8007BA90C /* CreateInvoiceViewController.swift */; };
 		1B019439CD1D463CE8A10800 /* Pods_Bookd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5985EC6818FFB0F3C36A8B7 /* Pods_Bookd.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +59,12 @@
 		08F9C47E288B1D6400D25296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08F9C480288B1D6400D25296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FF597E28A3E142007BA90C /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		08FF598128A3E9CF007BA90C /* AppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsViewController.swift; sourceTree = "<group>"; };
+		08FF598328A3EA86007BA90C /* CreateAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAppointmentsViewController.swift; sourceTree = "<group>"; };
+		08FF598528A3F71E007BA90C /* ShowAppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAppointmentViewController.swift; sourceTree = "<group>"; };
+		08FF598728A3FD96007BA90C /* CancelConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationViewController.swift; sourceTree = "<group>"; };
+		08FF598A28A400C2007BA90C /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewController.swift; sourceTree = "<group>"; };
+		08FF598C28A400F8007BA90C /* CreateInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInvoiceViewController.swift; sourceTree = "<group>"; };
 		4BB49487B54513978E815F56 /* Pods-Bookd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookd.debug.xcconfig"; path = "Target Support Files/Pods-Bookd/Pods-Bookd.debug.xcconfig"; sourceTree = "<group>"; };
 		704CA2174A7F360E8D66A64F /* Pods-Bookd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookd.release.xcconfig"; path = "Target Support Files/Pods-Bookd/Pods-Bookd.release.xcconfig"; sourceTree = "<group>"; };
 		D5985EC6818FFB0F3C36A8B7 /* Pods_Bookd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bookd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +93,8 @@
 		08C98BBA28A1F91700F0E4FF /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				08FF598928A400B6007BA90C /* InvoiceTab */,
+				08FF598028A3E9BF007BA90C /* AppointmentsTab */,
 				08C98BC028A223A100F0E4FF /* ConversationsTab */,
 				08C98BBD28A1F97800F0E4FF /* ServicesTab */,
 				08B6868328A0C1D2001357B2 /* SettingsViewController.swift */,
@@ -170,6 +184,26 @@
 				08B6868A28A1A7BF001357B2 /* TabBarViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		08FF598028A3E9BF007BA90C /* AppointmentsTab */ = {
+			isa = PBXGroup;
+			children = (
+				08FF598128A3E9CF007BA90C /* AppointmentsViewController.swift */,
+				08FF598328A3EA86007BA90C /* CreateAppointmentsViewController.swift */,
+				08FF598528A3F71E007BA90C /* ShowAppointmentViewController.swift */,
+				08FF598728A3FD96007BA90C /* CancelConfirmationViewController.swift */,
+			);
+			path = AppointmentsTab;
+			sourceTree = "<group>";
+		};
+		08FF598928A400B6007BA90C /* InvoiceTab */ = {
+			isa = PBXGroup;
+			children = (
+				08FF598A28A400C2007BA90C /* InvoiceViewController.swift */,
+				08FF598C28A400F8007BA90C /* CreateInvoiceViewController.swift */,
+			);
+			path = InvoiceTab;
 			sourceTree = "<group>";
 		};
 		4AAC57E83EA281029CCCBB16 /* Pods */ = {
@@ -305,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08FF598D28A400F8007BA90C /* CreateInvoiceViewController.swift in Sources */,
 				08B6868628A15A3E001357B2 /* DatabaseManager.swift in Sources */,
 				08F9C477288B1D6100D25296 /* ViewController.swift in Sources */,
 				08C98BBC28A1F97300F0E4FF /* AddServiceViewController.swift in Sources */,
@@ -312,12 +347,17 @@
 				08B6868228A0B72D001357B2 /* DashboardViewController.swift in Sources */,
 				08B6868428A0C1D2001357B2 /* SettingsViewController.swift in Sources */,
 				08F9C473288B1D6100D25296 /* AppDelegate.swift in Sources */,
+				08FF598828A3FD96007BA90C /* CancelConfirmationViewController.swift in Sources */,
+				08FF598B28A400C2007BA90C /* InvoiceViewController.swift in Sources */,
 				08F9C475288B1D6100D25296 /* SceneDelegate.swift in Sources */,
 				08B6868028A0B255001357B2 /* LoginViewController.swift in Sources */,
 				08B6868928A15B8A001357B2 /* DatabaseModels.swift in Sources */,
+				08FF598428A3EA86007BA90C /* CreateAppointmentsViewController.swift in Sources */,
 				08C98BC228A2A87B00F0E4FF /* ConversationsViewController.swift in Sources */,
+				08FF598628A3F71E007BA90C /* ShowAppointmentViewController.swift in Sources */,
 				08FF597F28A3E142007BA90C /* NewViewController.swift in Sources */,
 				08C98BBF28A2127300F0E4FF /* EditServiceViewController.swift in Sources */,
+				08FF598228A3E9CF007BA90C /* AppointmentsViewController.swift in Sources */,
 				08B6868B28A1A7BF001357B2 /* TabBarViewController.swift in Sources */,
 				08C98BB928A1F90200F0E4FF /* ServicesViewController.swift in Sources */,
 				08B6867E28A09014001357B2 /* RegisterViewController.swift in Sources */,
