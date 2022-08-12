@@ -24,7 +24,7 @@ extension DatabaseManager {
             "email": user.emailAddress,
             "username": user.username,
             "uid": user.uid,
-            "currentBalance": user.currentBalance
+            "currentBalance": user.currentBalance,
         ])
     }
     
@@ -118,7 +118,8 @@ extension DatabaseManager {
     public func getUser(with uid: String, completion: @escaping (User) -> Void) {
         database.child("Users").child(uid).observeSingleEvent(of: .value) { (snapshot) in
                     
-            let user = User(firstName: snapshot.childSnapshot(forPath: "firstName").value as! String, lastName: snapshot.childSnapshot(forPath: "lastName").value as! String, username: snapshot.childSnapshot(forPath: "username").value as! String, emailAddress: snapshot.childSnapshot(forPath: "emailAddress").value as! String, uid: snapshot.childSnapshot(forPath: "uid").value as! String, currentBalance: snapshot.childSnapshot(forPath: "currentBalance").value as? String ?? "0")
+            let user = User(firstName: snapshot.childSnapshot(forPath: "firstName").value as! String, lastName: snapshot.childSnapshot(forPath: "lastName").value as! String, username: snapshot.childSnapshot(forPath: "username").value as! String, emailAddress: snapshot.childSnapshot(forPath: "email").value as! String, uid: snapshot.childSnapshot(forPath: "uid").value as! String, currentBalance: snapshot.childSnapshot(forPath: "currentBalance").value as? String ?? "0"
+            )
             
             completion(user)
         }

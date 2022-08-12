@@ -50,7 +50,7 @@ class WithdrawMoneyViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    private func loadUserData(){
+    public func loadUserData(){
         
         // get the currentuser
         let currentUser = FirebaseAuth.Auth.auth().currentUser;
@@ -60,7 +60,7 @@ class WithdrawMoneyViewController: UIViewController {
         
         let dbRef = FirebaseDatabase.Database.database().reference().child("Users").child(uid!);
         
-        dbRef.observeSingleEvent(of: .value) {
+        dbRef.observe(.value) {
             (snapshot) in
             
             // get the currentBalance value

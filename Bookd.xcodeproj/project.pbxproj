@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		08A9F61128A5C6DC00FB6CAE /* ShowInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9F61028A5C6DC00FB6CAE /* ShowInvoiceViewController.swift */; };
 		08A9F61328A5D4F200FB6CAE /* WithdrawMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9F61228A5D4F200FB6CAE /* WithdrawMoneyViewController.swift */; };
+		08A9F61528A5FFEC00FB6CAE /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9F61428A5FFEC00FB6CAE /* EditInfoViewController.swift */; };
 		08B6867C28A08DBF001357B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08B6867B28A08DBF001357B2 /* GoogleService-Info.plist */; };
 		08B6867E28A09014001357B2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B6867D28A09014001357B2 /* RegisterViewController.swift */; };
 		08B6868028A0B255001357B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B6867F28A0B255001357B2 /* LoginViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		08A9F61028A5C6DC00FB6CAE /* ShowInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInvoiceViewController.swift; sourceTree = "<group>"; };
 		08A9F61228A5D4F200FB6CAE /* WithdrawMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawMoneyViewController.swift; sourceTree = "<group>"; };
+		08A9F61428A5FFEC00FB6CAE /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
 		08B6867B28A08DBF001357B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		08B6867D28A09014001357B2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		08B6867F28A0B255001357B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				08FF598C28A400F8007BA90C /* CreateInvoiceViewController.swift */,
 				08A9F61028A5C6DC00FB6CAE /* ShowInvoiceViewController.swift */,
 				08A9F61228A5D4F200FB6CAE /* WithdrawMoneyViewController.swift */,
+				08A9F61428A5FFEC00FB6CAE /* EditInfoViewController.swift */,
 			);
 			path = InvoiceTab;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				08C98BC228A2A87B00F0E4FF /* ConversationsViewController.swift in Sources */,
 				08A9F61328A5D4F200FB6CAE /* WithdrawMoneyViewController.swift in Sources */,
 				08FF598628A3F71E007BA90C /* ShowAppointmentViewController.swift in Sources */,
+				08A9F61528A5FFEC00FB6CAE /* EditInfoViewController.swift in Sources */,
 				08A9F61128A5C6DC00FB6CAE /* ShowInvoiceViewController.swift in Sources */,
 				08FF597F28A3E142007BA90C /* NewViewController.swift in Sources */,
 				08C98BBF28A2127300F0E4FF /* EditServiceViewController.swift in Sources */,

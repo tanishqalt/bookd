@@ -28,7 +28,7 @@ class AppointmentsViewController: UIViewController, UITableViewDelegate, UITable
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AppointmentCell", for: indexPath)
-        cell.textLabel?.text = appointments[indexPath.row].contactName
+        cell.textLabel?.text = appointments[indexPath.row].contactName + ", Status: " + (appointments[indexPath.row].appointmentSchedule ?? "Scheduled")
         return cell
     }
     
@@ -80,7 +80,7 @@ class AppointmentsViewController: UIViewController, UITableViewDelegate, UITable
                     let value = child.value as! NSDictionary
                     
                     // create a appointment using our model
-                    let appointment = Appointment(appointmentID: value["appointmentID"] as! String, contactName: value["contactName"] as! String, contactEmail: value["contactEmail"] as! String, scheduledTime: value["scheduledTime"] as! String, service: value["service"] as! String, notes: value["notes"] as! String, appointmentSchedule: value["appointmentSchedule"] as? String)
+                    let appointment = Appointment(appointmentID: value["appointmentID"] as! String, contactName: value["contactName"] as! String, contactEmail: value["contactEmail"] as! String, scheduledTime: value["scheduledTime"] as! String, service: value["service"] as! String, notes: value["notes"] as! String, appointmentSchedule: value["status"] as? String)
                     
                     
                     // add it to the array

@@ -28,7 +28,7 @@ class ServicesViewController: UIViewController, UITableViewDataSource, UITableVi
     // returns the cell after mapping the service title
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceCell", for: indexPath)
-        cell.textLabel?.text = services[indexPath.row].title
+        cell.textLabel?.text = services[indexPath.row].title + " ($" + services[indexPath.row].hourlyRate + " per hour)"
         return cell
     }
     

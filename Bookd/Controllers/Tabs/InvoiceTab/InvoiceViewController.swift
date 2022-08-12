@@ -26,7 +26,7 @@ class InvoiceViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InvoiceCell", for: indexPath)
-        cell.textLabel?.text = invoices[indexPath.row].invoiceNumber
+        cell.textLabel?.text = "Invoice #" + invoices[indexPath.row].invoiceNumber + ", Dated: " + invoices[indexPath.row].dateCompleted
         return cell
     }
     

@@ -37,10 +37,17 @@ class AddConversationViewController: UIViewController {
         
         DatabaseManager.shared.insertConversation(uid: uid!, conversation: new_conversation)
         
-        // show alert
         print("Conversation Created Successfully")
-        
-        // dismiss view controller
-        self.dismiss(animated: true)
+        // show alert
+
+        let alert = UIAlertController(title: "Success", message: "Your message has been sent", preferredStyle: .alert)
+
+        // add action to alert and dismiss
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.dismiss(animated: true, completion: nil)
+        }))
+
+        self.present(alert, animated: true)
     }
 }
