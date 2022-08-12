@@ -21,6 +21,7 @@ class ShowAppointmentViewController: UIViewController {
     @IBOutlet weak var service: UILabel!
     @IBOutlet weak var notes: UILabel!
     
+    @IBOutlet weak var appointmentStatusLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,21 @@ class ShowAppointmentViewController: UIViewController {
             if snapshot.childSnapshot(forPath: "status").value as? String == "Cancelled" {
                 self.cancelButton.isEnabled = false
             }
+            
+            // if the appointment status is cancelled, set the appointmentStatusLabel background as red else set is to green with text "Scheduled"
+            if snapshot.childSnapshot(forPath: "status").value as? String == "Cancelled" {
+                self.appointmentStatusLabel.backgroundColor = UIColor.red
+                self.appointmentStatusLabel.text = "Cancelled"
+                // add insets to the text
+                self.appointmentStatusLabel.textAlignment = .center
+                self.appointmentStatusLabel.textColor = UIColor.white
+                
+
+            } else {
+                self.appointmentStatusLabel.backgroundColor = UIColor.green
+                self.appointmentStatusLabel.text = "Scheduled"
+            }
+            
         }
         
     }

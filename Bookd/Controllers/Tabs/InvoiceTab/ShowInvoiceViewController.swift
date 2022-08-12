@@ -16,7 +16,7 @@ class ShowInvoiceViewController: UIViewController {
     
     // alternate action for payment
     var alternateAction = "Paid"
-
+    
     @IBOutlet weak var markPaidButton: UIBarButtonItem!
     @IBOutlet weak var sendReminderButton: UIBarButtonItem!
     
@@ -51,8 +51,14 @@ class ShowInvoiceViewController: UIViewController {
         DatabaseManager.shared.insertConversation(uid: uid, conversation: Conversation(conversationID: "", email: emailLabel.text!, subject: "Invoice #\(invoiceNumberLabel.text!) Reminder", message: "Hi! Requesting an update on Invoice# \(invoiceNumberLabel.text!) for the payment of CAD\(invoiceTotalLabel.text!)", invoiceNumber: invoiceNumberLabel.text!))
         
         // alert and dismiss
-        self.tabBarController?.selectedIndex = 2
-        self.dismiss(animated: true)
+        let alert = UIAlertController(title: "Reminder Sent", message: "A reminder has been sent to \(emailLabel.text!)", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler:
+                                        { (action) in
+            self.dismiss(animated: true)
+        }))
+
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func markPaidPressed(_ sender: Any) {
@@ -69,23 +75,23 @@ class ShowInvoiceViewController: UIViewController {
         
         // update the values
         dbRef.updateChildValues(["status": alternateAction])
-
+        
         // update the user balance
-
+        
         // get user
         let userRef = FirebaseDatabase.Database.database().reference().child("Users").child(uid!)
-
+        
         // get the currentBalance value
         userRef.observeSingleEvent(of: .value) {
             (snapshot) in
             
             // get the currentBalance value
             let currentBalance = snapshot.childSnapshot(forPath: "currentBalance").value as? String ?? "0";
-
+            
             // remove the dollar sign from invoice Total
             let invoiceTotal = self.invoiceTotalLabel.text!.replacingOccurrences(of: "$", with: "")
-
-
+            
+            
             print("Current Balance: \(currentBalance)")
             print("Invoice Total: \(invoiceTotal)")
             
@@ -95,31 +101,31 @@ class ShowInvoiceViewController: UIViewController {
             if self.alternateAction == "Unpaid" {
                 // update the database so that the "currentBalance" becomes +
                 // the currentBalance - the invoiceTotal
-                 newBalance = Int(currentBalance)! - Int(invoiceTotal)!
+                newBalance = Int(currentBalance)! - Int(invoiceTotal)!
             } else {
                 // update the database so that the "currentBalance" becomes -
                 // the currentBalance + the invoiceTotal
                 newBalance = Int(currentBalance)! + Int(invoiceTotal)!
             }
-
+            
             // print the new balance
             print("New Balance: \(newBalance)")
-
+            
             // update the database with the new balance as string
             userRef.updateChildValues(["currentBalance": String(newBalance)])
         }
-
+        
         // // add a success alert
-         let alert = UIAlertController(title: "Success", message: "You have successfully marked the invoice as \(alternateAction)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Success", message: "You have successfully marked the invoice as \(alternateAction)", preferredStyle: .alert)
         
         // // add an action to the alert
-         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-        //     // dismiss the alert
-             self.dismiss(animated: true)
-         }))
-
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            // dismiss the alert
+            self.dismiss(animated: true)
+        }))
+        
         // // present the alert
-         self.present(alert, animated: true)
+        self.present(alert, animated: true)
         
     }
     
@@ -154,14 +160,14 @@ class ShowInvoiceViewController: UIViewController {
                 // set alternate action to paid
                 self.alternateAction = "Paid"
             }
-
+            
             // if the invoice is paid, show unpaid button and set the title of markPaid button to "Mark Unpaid"
             if snapshot.childSnapshot(forPath: "status").value as! String == "Paid"{
                 self.markPaidButton.title = "Mark Unpaid"
                 // set alternate action to unpaid
                 self.alternateAction = "Unpaid"
             }
-
+            
         }
         
     }

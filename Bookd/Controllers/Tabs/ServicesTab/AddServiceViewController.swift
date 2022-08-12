@@ -39,9 +39,17 @@ class AddServiceViewController: UIViewController {
         
         // show alert
         print("Service Created Successfully")
-        
-        // dismiss view controller
-        self.dismiss(animated: true)
+
+        // Show Alert
+        let alert = UIAlertController(title: "Service Created", message: "Service Created Successfully", preferredStyle: .alert)
+
+        // add action and dismiss on ok
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.dismiss(animated: true, completion: nil)
+        }))
+
+        // present alert
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
