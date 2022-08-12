@@ -33,7 +33,7 @@ class CreateInvoiceViewController: UIViewController {
         guard let invoiceNumber = invoiceNumberInput.text,
               let email = emailInput.text,
               let serviceDescription = serviceDescriptionInput.text,
-              let invoiceTotal = invoiceNumberInput.text,
+              let invoiceTotal = invoiceTotalInput.text,
               !invoiceNumber.isEmpty,
               !email.isEmpty,
               !serviceDescription.isEmpty,
