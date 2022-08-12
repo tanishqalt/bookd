@@ -50,7 +50,7 @@ class CreateAppointmentsViewController: UIViewController {
         print("Outside: Creating appointment for \(user?.uid ?? "Couldn't retreive UID")")
         
         // submit to firebase
-        DatabaseManager.shared.insertAppointment(uid: user!.uid, appointment: Appointment(appointmentID: "", contactName: contactName, contactEmail: contactEmail, scheduledTime: scheduledTime, service: aboutService, notes: notes))
+        DatabaseManager.shared.insertAppointment(uid: user!.uid, appointment: Appointment(appointmentID: "", contactName: contactName, contactEmail: contactEmail, scheduledTime: scheduledTime, service: aboutService, notes: notes, appointmentSchedule: "Scheduled"))
         
         
         // show alert

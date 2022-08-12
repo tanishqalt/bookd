@@ -44,7 +44,7 @@ class RegisterViewController: UIViewController {
             
             let user = result.user
             
-            DatabaseManager.shared.insertUser(with: User(firstName: firstName, lastName: lastName, username: username, emailAddress: email, uid: user.uid))
+            DatabaseManager.shared.insertUser(with: User(firstName: firstName, lastName: lastName, username: username, emailAddress: email, uid: user.uid, currentBalance: "0"))
             print("Created User: \(user)")
             strongSelf.dismiss(animated: true)
         })

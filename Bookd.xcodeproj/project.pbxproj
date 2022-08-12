@@ -32,7 +32,6 @@
 		08FF598228A3E9CF007BA90C /* AppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF598128A3E9CF007BA90C /* AppointmentsViewController.swift */; };
 		08FF598428A3EA86007BA90C /* CreateAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF598328A3EA86007BA90C /* CreateAppointmentsViewController.swift */; };
 		08FF598628A3F71E007BA90C /* ShowAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF598528A3F71E007BA90C /* ShowAppointmentViewController.swift */; };
-		08FF598828A3FD96007BA90C /* CancelConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF598728A3FD96007BA90C /* CancelConfirmationViewController.swift */; };
 		08FF598B28A400C2007BA90C /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF598A28A400C2007BA90C /* InvoiceViewController.swift */; };
 		08FF598D28A400F8007BA90C /* CreateInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF598C28A400F8007BA90C /* CreateInvoiceViewController.swift */; };
 		1B019439CD1D463CE8A10800 /* Pods_Bookd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5985EC6818FFB0F3C36A8B7 /* Pods_Bookd.framework */; };
@@ -66,7 +65,6 @@
 		08FF598128A3E9CF007BA90C /* AppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsViewController.swift; sourceTree = "<group>"; };
 		08FF598328A3EA86007BA90C /* CreateAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAppointmentsViewController.swift; sourceTree = "<group>"; };
 		08FF598528A3F71E007BA90C /* ShowAppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAppointmentViewController.swift; sourceTree = "<group>"; };
-		08FF598728A3FD96007BA90C /* CancelConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmationViewController.swift; sourceTree = "<group>"; };
 		08FF598A28A400C2007BA90C /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewController.swift; sourceTree = "<group>"; };
 		08FF598C28A400F8007BA90C /* CreateInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInvoiceViewController.swift; sourceTree = "<group>"; };
 		4BB49487B54513978E815F56 /* Pods-Bookd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookd.debug.xcconfig"; path = "Target Support Files/Pods-Bookd/Pods-Bookd.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 				08FF598128A3E9CF007BA90C /* AppointmentsViewController.swift */,
 				08FF598328A3EA86007BA90C /* CreateAppointmentsViewController.swift */,
 				08FF598528A3F71E007BA90C /* ShowAppointmentViewController.swift */,
-				08FF598728A3FD96007BA90C /* CancelConfirmationViewController.swift */,
 			);
 			path = AppointmentsTab;
 			sourceTree = "<group>";
@@ -353,7 +350,6 @@
 				08B6868228A0B72D001357B2 /* DashboardViewController.swift in Sources */,
 				08B6868428A0C1D2001357B2 /* SettingsViewController.swift in Sources */,
 				08F9C473288B1D6100D25296 /* AppDelegate.swift in Sources */,
-				08FF598828A3FD96007BA90C /* CancelConfirmationViewController.swift in Sources */,
 				08FF598B28A400C2007BA90C /* InvoiceViewController.swift in Sources */,
 				08F9C475288B1D6100D25296 /* SceneDelegate.swift in Sources */,
 				08B6868028A0B255001357B2 /* LoginViewController.swift in Sources */,

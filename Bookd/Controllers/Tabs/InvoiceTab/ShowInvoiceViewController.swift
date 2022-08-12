@@ -70,12 +70,58 @@ class ShowInvoiceViewController: UIViewController {
         // update the values
         dbRef.updateChildValues(["status": alternateAction])
 
-        // Todo: add a success alert
-        
-        // go back to the previous view
-        self.dismiss(animated: true)
-        
+        // update the user balance
+
+        // get user
+        let userRef = FirebaseDatabase.Database.database().reference().child("Users").child(uid!)
+
+        // get the currentBalance value
+        userRef.observeSingleEvent(of: .value) {
+            (snapshot) in
+            
+            // get the currentBalance value
+            let currentBalance = snapshot.childSnapshot(forPath: "currentBalance").value as? String ?? "0";
+
+            // remove the dollar sign from invoice Total
+            let invoiceTotal = self.invoiceTotalLabel.text!.replacingOccurrences(of: "$", with: "")
+
+
+            print("Current Balance: \(currentBalance)")
+            print("Invoice Total: \(invoiceTotal)")
+            
+            var newBalance = 0
+            
+            // if the action is "mark unpaid"
+            if self.alternateAction == "Unpaid" {
+                // update the database so that the "currentBalance" becomes +
+                // the currentBalance - the invoiceTotal
+                 newBalance = Int(currentBalance)! - Int(invoiceTotal)!
+            } else {
+                // update the database so that the "currentBalance" becomes -
+                // the currentBalance + the invoiceTotal
+                newBalance = Int(currentBalance)! + Int(invoiceTotal)!
+            }
+
+            // print the new balance
+            print("New Balance: \(newBalance)")
+
+            // update the database with the new balance as string
+            userRef.updateChildValues(["currentBalance": String(newBalance)])
         }
+
+        // // add a success alert
+         let alert = UIAlertController(title: "Success", message: "You have successfully marked the invoice as \(alternateAction)", preferredStyle: .alert)
+        
+        // // add an action to the alert
+         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+        //     // dismiss the alert
+             self.dismiss(animated: true)
+         }))
+
+        // // present the alert
+         self.present(alert, animated: true)
+        
+    }
     
     private func loadInvoice(){
         

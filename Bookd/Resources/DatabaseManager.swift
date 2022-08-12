@@ -23,7 +23,8 @@ extension DatabaseManager {
             "lastName": user.lastName,
             "email": user.emailAddress,
             "username": user.username,
-            "uid": user.uid
+            "uid": user.uid,
+            "currentBalance": user.currentBalance
         ])
     }
     
@@ -106,6 +107,26 @@ extension DatabaseManager {
             "serviceDescription": invoice.serviceDescription,
             "invoiceTotal": invoice.invoiceTotal
         ])
+    }
+
+    public func updateUserBalance(uid: String, balance: String) {
+        // update the user balance "currentBalance"
+        database.child("Users").child(uid).child("currentBalance").setValue(balance)
+    }
+
+    // function to get the user and return it
+    public func getUser(with uid: String, completion: @escaping (User) -> Void) {
+        database.child("Users").child(uid).observeSingleEvent(of: .value) { (snapshot) in
+                    
+            let user = User(firstName: snapshot.childSnapshot(forPath: "firstName").value as! String, lastName: snapshot.childSnapshot(forPath: "lastName").value as! String, username: snapshot.childSnapshot(forPath: "username").value as! String, emailAddress: snapshot.childSnapshot(forPath: "emailAddress").value as! String, uid: snapshot.childSnapshot(forPath: "uid").value as! String, currentBalance: snapshot.childSnapshot(forPath: "currentBalance").value as? String ?? "0")
+            
+            completion(user)
+        }
+    }
+
+    // function to update an appointment and set the status
+    public func updateAppointmentStatus(uid: String, appointmentID: String, status: String) {
+        database.child("Appointments").child(uid).child(appointmentID).child("status").setValue(status)
     }
 }
 

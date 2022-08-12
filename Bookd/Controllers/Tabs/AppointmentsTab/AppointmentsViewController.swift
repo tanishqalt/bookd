@@ -80,7 +80,8 @@ class AppointmentsViewController: UIViewController, UITableViewDelegate, UITable
                     let value = child.value as! NSDictionary
                     
                     // create a appointment using our model
-                    let appointment = Appointment(appointmentID: value["appointmentID"] as! String, contactName: value["contactName"] as! String, contactEmail: value["contactEmail"] as! String, scheduledTime: value["scheduledTime"] as! String, service: value["service"] as! String, notes: value["notes"] as! String)
+                    let appointment = Appointment(appointmentID: value["appointmentID"] as! String, contactName: value["contactName"] as! String, contactEmail: value["contactEmail"] as! String, scheduledTime: value["scheduledTime"] as! String, service: value["service"] as! String, notes: value["notes"] as! String, appointmentSchedule: value["appointmentSchedule"] as? String)
+                    
                     
                     // add it to the array
                     self.appointments.append(appointment)

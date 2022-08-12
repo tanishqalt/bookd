@@ -11,6 +11,8 @@ import FirebaseDatabase
 
 class ShowAppointmentViewController: UIViewController {
     
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    
     var appointmentID: String?
 
     @IBOutlet weak var name: UILabel!
@@ -48,8 +50,33 @@ class ShowAppointmentViewController: UIViewController {
             self.scheduledTime.text = snapshot.childSnapshot(forPath: "scheduledTime").value as? String
             self.service.text = snapshot.childSnapshot(forPath: "service").value as? String
             self.notes.text = snapshot.childSnapshot(forPath: "notes").value as? String
+
+            // if the appointment status is cancelled, disable the cancel button
+            if snapshot.childSnapshot(forPath: "status").value as? String == "Cancelled" {
+                self.cancelButton.isEnabled = false
+            }
         }
         
+    }
+    
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        
+        // get the currentuser
+        let currentUser = FirebaseAuth.Auth.auth().currentUser;
+        
+        // retrieve the uid
+        let uid = currentUser?.uid;
+        
+        DatabaseManager.shared.updateAppointmentStatus(uid: uid!, appointmentID: appointmentID ?? "", status: "Cancelled")
+
+        // alert and dismiss the view
+        let alert = UIAlertController(title: "Appointment Cancelled", message: "Your appointment has been cancelled", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }))
+
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

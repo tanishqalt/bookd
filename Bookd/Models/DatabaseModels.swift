@@ -50,6 +50,7 @@ struct Appointment {
     let scheduledTime: String;
     let service: String;
     let notes: String;
+    let appointmentSchedule: String?;
 }
 
 
