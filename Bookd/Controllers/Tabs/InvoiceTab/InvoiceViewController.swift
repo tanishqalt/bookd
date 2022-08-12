@@ -96,4 +96,13 @@ class InvoiceViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    // prepares for the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == segueIdentifier) {
+            // do something later
+            guard let showInvoiceVC = segue.destination as? ShowInvoiceViewController else { return }
+            showInvoiceVC.invoiceID = self.selectedInvoiceID
+        }
+    }
+    
 }

@@ -17,6 +17,7 @@ struct User {
       return emailAddress
     };
     let uid: String;
+    let currentBalance: String?;
 }
 
 // Invoice Model
