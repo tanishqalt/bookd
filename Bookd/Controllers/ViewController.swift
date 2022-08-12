@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Bookd
 //
-//  Created by Tanishq Sharma on 2022-07-22.
+//  Created by TM Humber Group on 2022-07-22.
 //
 
 import UIKit

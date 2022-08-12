@@ -2,7 +2,7 @@
 //  ShowAppointmentViewController.swift
 //  Bookd
 //
-//  Created by Tanishq Sharma on 2022-08-10.
+//  Created by TM Humber Group on 2022-08-10.
 //
 
 import UIKit

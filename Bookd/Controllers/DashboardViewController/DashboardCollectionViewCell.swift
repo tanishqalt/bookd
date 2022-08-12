@@ -2,7 +2,7 @@
 //  DashboardCollectionViewCell.swift
 //  Bookd
 //
-//  Created by Tanishq Sharma on 2022-08-12.
+//  Created by TM Humber Group on 2022-08-12.
 //
 
 import UIKit
