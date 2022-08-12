@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class DashboardViewController: UIViewController {
     
@@ -35,6 +36,23 @@ class DashboardViewController: UIViewController {
         collectionView.register(DashboardCollectionViewCell.nib(), forCellWithReuseIdentifier: DashboardCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let currentUser = FirebaseAuth.Auth.auth().currentUser;
+        
+        let uid = currentUser?.uid;
+
+         let dbRef = FirebaseDatabase.Database.database().reference().child("Users").child(uid!);
+
+         dbRef.observe(.value) {
+            (snapshot) in    
+            // set the welcome text
+             self.WelcomeLabel.text = "Welcome, " + (snapshot.childSnapshot(forPath: "firstName").value as? String ?? "") + "!"
+        }
+       
     }
     
     private func goToTab(index: Int){
