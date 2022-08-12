@@ -6,6 +6,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -276,96 +277,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NJ1-1i-S5w">
+                                <rect key="frame" x="0.0" y="179" width="414" height="683"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Aps-0r-80c">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7aD-mZ-AsN">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iQB-Wt-CFt">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Merrybeth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8m-X0-gDd">
-                                <rect key="frame" x="46" y="216" width="322" height="32"/>
+                                <rect key="frame" x="46" y="97" width="322" height="32"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOu-1l-MFd">
-                                <rect key="frame" x="46" y="360" width="322" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="vsh-Ht-Ury"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="View Conversations"/>
-                                <connections>
-                                    <action selector="conversationButtonPressed:" destination="PU3-cT-FPd" eventType="touchUpInside" id="mAn-yt-gyy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrS-Pr-Y46">
-                                <rect key="frame" x="46" y="312" width="322" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Bfg-sN-xxt"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="View Appointments"/>
-                                <connections>
-                                    <action selector="appointmentButtonPressed:" destination="PU3-cT-FPd" eventType="touchUpInside" id="Bbn-nc-7Bx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3Q-Or-dCx">
-                                <rect key="frame" x="46" y="408" width="322" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="View Services"/>
-                                <connections>
-                                    <action selector="serviceButtonPressed:" destination="PU3-cT-FPd" eventType="touchUpInside" id="omG-ES-OAD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6V5-jc-S6M">
-                                <rect key="frame" x="46" y="447" width="322" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="m8e-IC-AQ3"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Settings"/>
-                                <connections>
-                                    <action selector="settingsButtonPressed:" destination="PU3-cT-FPd" eventType="touchUpInside" id="njd-U0-JEX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzq-ba-XED">
-                                <rect key="frame" x="46" y="264" width="322" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="5Dq-2Z-pX5"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="View Invoices"/>
-                                <connections>
-                                    <action selector="invoiceButtonPressed:" destination="PU3-cT-FPd" eventType="touchUpInside" id="TCj-5D-hOL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qaf-Is-EHr"/>
-                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qaf-Is-EHr" firstAttribute="trailing" secondItem="bzq-ba-XED" secondAttribute="trailing" constant="46" id="2b6-eI-tOF"/>
-                            <constraint firstItem="LrS-Pr-Y46" firstAttribute="top" secondItem="bzq-ba-XED" secondAttribute="bottom" constant="8" symbolic="YES" id="6DD-AC-tpg"/>
-                            <constraint firstItem="qaf-Is-EHr" firstAttribute="trailing" secondItem="6V5-jc-S6M" secondAttribute="trailing" constant="46" id="9Nn-Dn-xJf"/>
-                            <constraint firstItem="6V5-jc-S6M" firstAttribute="top" secondItem="x3Q-Or-dCx" secondAttribute="bottom" constant="8" id="BvI-mw-5r7"/>
-                            <constraint firstItem="n8m-X0-gDd" firstAttribute="leading" secondItem="qaf-Is-EHr" secondAttribute="leading" constant="46" id="JWB-Or-s8f"/>
-                            <constraint firstItem="bzq-ba-XED" firstAttribute="leading" secondItem="qaf-Is-EHr" secondAttribute="leading" constant="46" id="LiW-W6-Ve9"/>
-                            <constraint firstItem="TOu-1l-MFd" firstAttribute="leading" secondItem="qaf-Is-EHr" secondAttribute="leading" constant="46" id="Mdh-5A-yCg"/>
-                            <constraint firstItem="TOu-1l-MFd" firstAttribute="top" secondItem="LrS-Pr-Y46" secondAttribute="bottom" constant="8" symbolic="YES" id="NIS-MR-ffu"/>
-                            <constraint firstItem="LrS-Pr-Y46" firstAttribute="leading" secondItem="qaf-Is-EHr" secondAttribute="leading" constant="46" id="O8N-CJ-3q8"/>
-                            <constraint firstItem="qaf-Is-EHr" firstAttribute="trailing" secondItem="n8m-X0-gDd" secondAttribute="trailing" constant="46" id="QY9-MX-N0M"/>
-                            <constraint firstItem="qaf-Is-EHr" firstAttribute="trailing" secondItem="TOu-1l-MFd" secondAttribute="trailing" constant="46" id="bDJ-mL-fND"/>
-                            <constraint firstItem="6V5-jc-S6M" firstAttribute="leading" secondItem="qaf-Is-EHr" secondAttribute="leading" constant="46" id="dsM-Sn-i9x"/>
-                            <constraint firstItem="n8m-X0-gDd" firstAttribute="top" secondItem="qaf-Is-EHr" secondAttribute="top" constant="172" id="gDz-Wt-b7w"/>
-                            <constraint firstItem="x3Q-Or-dCx" firstAttribute="top" secondItem="TOu-1l-MFd" secondAttribute="bottom" constant="8" symbolic="YES" id="l9u-G0-ofp"/>
-                            <constraint firstItem="qaf-Is-EHr" firstAttribute="trailing" secondItem="x3Q-Or-dCx" secondAttribute="trailing" constant="46" id="mN0-i1-yYA"/>
-                            <constraint firstItem="qaf-Is-EHr" firstAttribute="trailing" secondItem="LrS-Pr-Y46" secondAttribute="trailing" constant="46" id="pJw-g5-grq"/>
-                            <constraint firstItem="bzq-ba-XED" firstAttribute="top" secondItem="n8m-X0-gDd" secondAttribute="bottom" constant="16" id="tCv-Hn-Yo6"/>
-                            <constraint firstItem="x3Q-Or-dCx" firstAttribute="leading" secondItem="qaf-Is-EHr" secondAttribute="leading" constant="46" id="zPY-Jx-NJM"/>
+                            <constraint firstItem="n8m-X0-gDd" firstAttribute="top" secondItem="qaf-Is-EHr" secondAttribute="top" constant="53" id="95X-zc-t8F"/>
+                            <constraint firstItem="NJ1-1i-S5w" firstAttribute="leading" secondItem="qaf-Is-EHr" secondAttribute="leading" id="Wfk-Zg-rTB"/>
+                            <constraint firstItem="n8m-X0-gDd" firstAttribute="centerX" secondItem="NJ1-1i-S5w" secondAttribute="centerX" id="XqM-5t-RgN"/>
+                            <constraint firstItem="NJ1-1i-S5w" firstAttribute="trailing" secondItem="qaf-Is-EHr" secondAttribute="trailing" id="nyn-Xv-Ryg"/>
+                            <constraint firstItem="NJ1-1i-S5w" firstAttribute="top" secondItem="n8m-X0-gDd" secondAttribute="bottom" constant="50" id="qMd-ni-UJG"/>
+                            <constraint firstItem="n8m-X0-gDd" firstAttribute="leading" secondItem="qaf-Is-EHr" secondAttribute="leading" constant="46" id="rcY-Ms-tTb"/>
+                            <constraint firstItem="qaf-Is-EHr" firstAttribute="bottom" secondItem="NJ1-1i-S5w" secondAttribute="bottom" id="zEa-jv-MzT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="laX-nG-9OU"/>
                     <connections>
                         <outlet property="WelcomeLabel" destination="n8m-X0-gDd" id="fFB-Ql-Bkh"/>
+                        <outlet property="collectionView" destination="NJ1-1i-S5w" id="yKD-I0-g9t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKK-ue-anc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077" y="917"/>
+            <point key="canvasLocation" x="1076.8115942028987" y="916.74107142857133"/>
         </scene>
         <!--Appointments-->
         <scene sceneID="S8u-c2-w93">
@@ -467,13 +426,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Date and Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGw-TJ-31a">
-                                <rect key="frame" x="20" y="300" width="374" height="18"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="300" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="Ot2-4t-Pjh">
-                                <rect key="frame" x="20" y="342" width="374" height="380.5"/>
+                                <rect key="frame" x="20" y="341" width="374" height="380.5"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="682099200">
                                     <!--2022-08-13 16:00:00 +0000-->
                                 </date>

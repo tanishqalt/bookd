@@ -10,6 +10,8 @@
 		08A9F61128A5C6DC00FB6CAE /* ShowInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9F61028A5C6DC00FB6CAE /* ShowInvoiceViewController.swift */; };
 		08A9F61328A5D4F200FB6CAE /* WithdrawMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9F61228A5D4F200FB6CAE /* WithdrawMoneyViewController.swift */; };
 		08A9F61528A5FFEC00FB6CAE /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9F61428A5FFEC00FB6CAE /* EditInfoViewController.swift */; };
+		08A9F61B28A6A26600FB6CAE /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9F61928A6A26600FB6CAE /* DashboardCollectionViewCell.swift */; };
+		08A9F61C28A6A26600FB6CAE /* DashboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A9F61A28A6A26600FB6CAE /* DashboardCollectionViewCell.xib */; };
 		08B6867C28A08DBF001357B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08B6867B28A08DBF001357B2 /* GoogleService-Info.plist */; };
 		08B6867E28A09014001357B2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B6867D28A09014001357B2 /* RegisterViewController.swift */; };
 		08B6868028A0B255001357B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B6867F28A0B255001357B2 /* LoginViewController.swift */; };
@@ -42,6 +44,8 @@
 		08A9F61028A5C6DC00FB6CAE /* ShowInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInvoiceViewController.swift; sourceTree = "<group>"; };
 		08A9F61228A5D4F200FB6CAE /* WithdrawMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawMoneyViewController.swift; sourceTree = "<group>"; };
 		08A9F61428A5FFEC00FB6CAE /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
+		08A9F61928A6A26600FB6CAE /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		08A9F61A28A6A26600FB6CAE /* DashboardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardCollectionViewCell.xib; sourceTree = "<group>"; };
 		08B6867B28A08DBF001357B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		08B6867D28A09014001357B2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		08B6867F28A0B255001357B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08A9F61628A6A22500FB6CAE /* DashboardViewController */ = {
+			isa = PBXGroup;
+			children = (
+				08B6868128A0B72D001357B2 /* DashboardViewController.swift */,
+				08A9F61928A6A26600FB6CAE /* DashboardCollectionViewCell.swift */,
+				08A9F61A28A6A26600FB6CAE /* DashboardCollectionViewCell.xib */,
+			);
+			path = DashboardViewController;
+			sourceTree = "<group>";
+		};
 		08B6868728A15B81001357B2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,10 +194,10 @@
 		08F9C488288B2F3000D25296 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				08A9F61628A6A22500FB6CAE /* DashboardViewController */,
 				08F9C476288B1D6100D25296 /* ViewController.swift */,
 				08B6867D28A09014001357B2 /* RegisterViewController.swift */,
 				08B6867F28A0B255001357B2 /* LoginViewController.swift */,
-				08B6868128A0B72D001357B2 /* DashboardViewController.swift */,
 				08C98BBA28A1F91700F0E4FF /* Tabs */,
 				08B6868A28A1A7BF001357B2 /* TabBarViewController.swift */,
 			);
@@ -293,6 +307,7 @@
 				08B6867C28A08DBF001357B2 /* GoogleService-Info.plist in Resources */,
 				08F9C47C288B1D6400D25296 /* Assets.xcassets in Resources */,
 				08F9C47A288B1D6100D25296 /* Main.storyboard in Resources */,
+				08A9F61C28A6A26600FB6CAE /* DashboardCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +368,7 @@
 				08B6868228A0B72D001357B2 /* DashboardViewController.swift in Sources */,
 				08B6868428A0C1D2001357B2 /* SettingsViewController.swift in Sources */,
 				08F9C473288B1D6100D25296 /* AppDelegate.swift in Sources */,
+				08A9F61B28A6A26600FB6CAE /* DashboardCollectionViewCell.swift in Sources */,
 				08FF598B28A400C2007BA90C /* InvoiceViewController.swift in Sources */,
 				08F9C475288B1D6100D25296 /* SceneDelegate.swift in Sources */,
 				08B6868028A0B255001357B2 /* LoginViewController.swift in Sources */,
